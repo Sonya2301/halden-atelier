@@ -56,16 +56,34 @@
 
 <style>
   :root{
+    /* — colour — */
     --bg:        #efece5;
     --bg-deep:   #e8e4dc;
+    --paper:     #faf8f3;
     --ink:       #1a1815;
     --ink-2:     #5d5a52;
     --ink-3:     #908c83;
+    --accent:    #8a3a26;
     --line:      rgba(26,24,21,0.10);
     --line-strong: rgba(26,24,21,0.22);
-    --accent:    #8a3a26;
-    --paper:     #faf8f3;
-    --motion:    cubic-bezier(0.32, 0.72, 0, 1);
+
+    /* — typography — */
+    --font-display: var(--font-display);
+    --font-body:    "Outfit", system-ui, -apple-system, sans-serif;
+    --font-mono:    "JetBrains Mono", ui-monospace, monospace;
+
+    /* — radius — */
+    --r-sm:   12px;
+    --r-md:   18px;
+    --r-card: 22px;
+    --r-lg:   28px;
+    --r-pill: 999px;
+
+    /* — shadow — */
+    --shadow-soft: 0 30px 60px -28px rgba(26,24,21,0.18);
+
+    /* — motion — */
+    --motion:      cubic-bezier(0.32, 0.72, 0, 1);
     --motion-slow: cubic-bezier(0.16, 1, 0.3, 1);
   }
 
@@ -74,7 +92,7 @@
   html{ background: var(--bg); }
   body{
     background: transparent;
-    font-family: "Outfit", system-ui, sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -90,7 +108,7 @@
     background: var(--ink);
     color: var(--bg);
     padding: .75rem 1.25rem;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     font-size: .85rem;
     text-decoration: none;
     transition: top .25s var(--motion);
@@ -168,7 +186,7 @@
     background: rgba(250, 248, 243, 0.65);
     backdrop-filter: blur(18px) saturate(140%);
     -webkit-backdrop-filter: blur(18px) saturate(140%);
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     border: 1px solid rgba(26,24,21,0.06);
     box-shadow:
       inset 0 1px 0 rgba(255,255,255,0.6),
@@ -182,7 +200,7 @@
     to  { opacity: 1; transform: translate(-50%, 0); }
   }
   .nav-mark{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-size: 1.05rem;
     letter-spacing: -0.02em;
@@ -215,7 +233,7 @@
     display: inline-flex; align-items: center;
     gap: .55rem;
     padding: .5rem .5rem .5rem 1.1rem;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background: var(--ink);
     color: var(--bg);
     text-decoration: none;
@@ -227,7 +245,7 @@
   }
   .pill .pill-icon{
     width: 1.85rem; height: 1.85rem;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background: rgba(255,255,255,0.12);
     display: grid; place-items: center;
     font-size: .8rem;
@@ -244,7 +262,7 @@
   .ghost{
     display: inline-flex; align-items: center; gap: .55rem;
     padding: .9rem 1.25rem;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background: transparent;
     color: var(--ink);
     border: 1px solid rgba(26,24,21,0.16);
@@ -279,7 +297,7 @@
   .eyebrow{
     display: inline-flex; align-items: center; gap: .6rem;
     padding: .42rem 1rem;
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background: rgba(250, 248, 243, 0.5);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -303,7 +321,7 @@
     50%    { opacity: .7; box-shadow: 0 0 0 6px rgba(138, 58, 38, 0); }
   }
   h1.wordmark{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-weight: 400;
     font-size: clamp(3.4rem, 11vw, 9rem);
     line-height: 0.96;
@@ -318,7 +336,7 @@
     font-weight: 300;
   }
   .tagline{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.05rem, 1.6vw, 1.35rem);
@@ -354,7 +372,7 @@
     max-width: 980px;
   }
   .panel .index{
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     font-size: .78rem;
     letter-spacing: .22em;
     color: var(--accent);
@@ -362,7 +380,7 @@
   }
   /* editorial italic label — replaces banned "SECTION 01" meta-label */
   .panel .label{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-style: normal;
     font-weight: 400;
     font-size: 1.1rem;
@@ -379,7 +397,7 @@
     display: inline-block;
     width: clamp(2.2rem, 5.2vw, 4.2rem);
     height: clamp(1.4rem, 3.4vw, 2.6rem);
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     background-image: var(--img);
     background-size: cover;
     background-position: center;
@@ -418,7 +436,7 @@
     will-change: transform;
   }
   .marquee span{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-style: italic;
     font-weight: 300;
     font-size: clamp(1.6rem, 3.4vw, 2.6rem);
@@ -445,7 +463,7 @@
   @keyframes slide{ to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce){ .marquee-track{ animation: none; } }
   .panel h2{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-weight: 400;
     font-size: clamp(2.4rem, 5.6vw, 5rem);
     line-height: 1.02;
@@ -483,7 +501,7 @@
     margin-bottom: .2rem;
   }
   .panel .meta span{
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     font-size: .78rem;
     color: var(--ink-3);
     letter-spacing: .04em;
@@ -527,7 +545,7 @@
   }
   .frame-chip .index-mini{
     margin-right: .8rem;
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     color: var(--accent);
     letter-spacing: .18em;
     text-transform: uppercase;
@@ -563,14 +581,14 @@
     position: absolute;
     left: 1.2rem; bottom: 1.2rem;
     z-index: 3;
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     font-size: .7rem;
     letter-spacing: .12em;
     color: var(--ink-2);
     background: rgba(250, 248, 243, 0.7);
     backdrop-filter: blur(8px);
     border: 1px solid var(--line);
-    border-radius: 999px;
+    border-radius: var(--r-pill);
     padding: .35rem .7rem;
   }
   .frame-chip b{ color: var(--ink); font-weight: 500; }
@@ -604,14 +622,14 @@
     pointer-events: auto;
   }
   .chapter .index{
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     font-size: .72rem;
     letter-spacing: .22em;
     color: var(--accent);
     text-transform: uppercase;
   }
   .chapter h2{
-    font-family: "Fraunces", serif;
+    font-family: var(--font-display);
     font-weight: 400;
     font-size: clamp(2rem, 3.6vw, 3.2rem);
     line-height: 1.04;
@@ -640,10 +658,10 @@
     padding-top: 1rem;
     font-size: .8rem;
     color: var(--ink-3);
-    font-family: "JetBrains Mono", monospace;
+    font-family: var(--font-mono);
     letter-spacing: .04em;
   }
-  .chapter .meta b{ display: block; color: var(--ink); font-weight: 500; font-family: "Outfit", sans-serif; font-size: 1rem; letter-spacing: 0; }
+  .chapter .meta b{ display: block; color: var(--ink); font-weight: 500; font-family: var(--font-body); font-size: 1rem; letter-spacing: 0; }
 
   /* progress rail down the right edge */
   .rail{
