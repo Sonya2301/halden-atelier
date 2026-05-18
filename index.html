@@ -362,9 +362,17 @@
   .marquee span::after{
     content: "";
     display: inline-block;
-    width: 6px; height: 6px;
+    width: 7px; height: 7px;
     border-radius: 50%;
     background: var(--accent);
+  }
+  .marquee .sep{
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin: 0 .15rem;
+    vertical-align: 0.22em;
   }
   @keyframes slide{ to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce){ .marquee-track{ animation: none; } }
@@ -694,14 +702,14 @@
 <!-- KINETIC MARQUEE — material vocabulary -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
-    <span>Your future home — is waiting — at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
+    <span>Your future home <span class="sep"></span> is waiting <span class="sep"></span> at Halden Atelier</span>
   </div>
 </div>
 
