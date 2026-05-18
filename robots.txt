@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sonya2301.github.io/halden-atelier/sitemap.xml

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#efece5" />
+<title>Halden Atelier — Page not found</title>
+<meta name="description" content="The page you were looking for doesn't exist. Return to Halden Atelier." />
+<link rel="canonical" href="https://sonya2301.github.io/halden-atelier/" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24' font-family='serif' font-style='italic'>H</text></svg>" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400&family=Outfit:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #efece5;
+    --ink: #1a1815;
+    --ink-2: #5d5a52;
+    --ink-3: #908c83;
+    --accent: #8a3a26;
+    --line: rgba(26,24,21,0.10);
+    --motion: cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  *,*::before,*::after{ box-sizing: border-box; margin: 0; padding: 0; }
+  html, body{ background: var(--bg); color: var(--ink); }
+  body{
+    font-family: "Outfit", system-ui, sans-serif;
+    min-height: 100dvh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before{
+    content: "";
+    position: fixed; inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(26,24,21,0.03) 1px, transparent 1px);
+    background-size: 6px 6px;
+    mix-blend-mode: multiply;
+    opacity: .25;
+  }
+  main{ position: relative; z-index: 2; max-width: 640px; display: grid; gap: 2rem; justify-items: center; }
+  .code{
+    font-family: "JetBrains Mono", monospace;
+    font-size: .7rem;
+    letter-spacing: .22em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  h1{
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+    font-size: clamp(2.8rem, 8vw, 6rem);
+    line-height: 0.98;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+  h1 em{ font-style: italic; color: var(--accent); font-weight: 300; }
+  p{
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    color: var(--ink-2);
+    max-width: 44ch;
+    line-height: 1.5;
+  }
+  .actions{ display: flex; gap: .8rem; flex-wrap: wrap; justify-content: center; }
+  .pill{
+    display: inline-flex; align-items: center; gap: .55rem;
+    padding: .7rem .7rem .7rem 1.35rem;
+    border-radius: 999px;
+    background: var(--ink);
+    color: var(--bg);
+    text-decoration: none;
+    font-family: "Outfit", sans-serif;
+    font-size: .9rem;
+    transition: transform .5s var(--motion);
+  }
+  .pill .pill-icon{
+    width: 2rem; height: 2rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.12);
+    display: grid; place-items: center;
+    transition: transform .5s var(--motion);
+  }
+  .pill:hover{ transform: translateY(-1px); }
+  .pill:hover .pill-icon{ transform: translateX(2px); }
+  .pill:active{ transform: scale(0.985); }
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+</style>
+</head>
+<body>
+  <main>
+    <span class="code">Error · 404</span>
+    <h1>This room <em>isn't built yet</em>.</h1>
+    <p>The page you were looking for doesn't exist — or hasn't been drawn. Step back to the entrance.</p>
+    <div class="actions">
+      <a href="/halden-atelier/" class="pill">
+        Back to Halden Atelier
+        <span class="pill-icon" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </main>
+</body>
+</html>

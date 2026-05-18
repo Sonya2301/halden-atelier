@@ -3,9 +3,52 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Halden Atelier — Interior Architecture</title>
-<meta name="description" content="Halden Atelier — an independent interior architecture practice between Oslo and Mexico City." />
+<meta name="theme-color" content="#efece5" />
+<meta name="color-scheme" content="light" />
+
+<title>Halden Atelier — Interiors built to be home.</title>
+<meta name="description" content="Halden Atelier is an independent interior architecture practice in Bratislava. Residential interiors built to be home, with restraint and material honesty." />
+
+<link rel="canonical" href="https://sonya2301.github.io/halden-atelier/" />
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='24' font-size='24' font-family='serif' font-style='italic'>H</text></svg>" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Halden Atelier" />
+<meta property="og:title" content="Halden Atelier — Interiors built to be home." />
+<meta property="og:description" content="Independent interior architecture practice in Bratislava. Residential interiors built to be home." />
+<meta property="og:url" content="https://sonya2301.github.io/halden-atelier/" />
+<meta property="og:image" content="https://sonya2301.github.io/halden-atelier/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="A cross-section view of a Halden Atelier residential interior." />
+<meta property="og:locale" content="en_GB" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Halden Atelier — Interiors built to be home." />
+<meta name="twitter:description" content="Independent interior architecture practice in Bratislava." />
+<meta name="twitter:image" content="https://sonya2301.github.io/halden-atelier/og-image.jpg" />
+
+<!-- Structured data (Organization) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Halden Atelier",
+  "description": "Independent interior architecture practice in Bratislava. Residential interiors built to be home.",
+  "url": "https://sonya2301.github.io/halden-atelier/",
+  "image": "https://sonya2301.github.io/halden-atelier/og-image.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bratislava",
+    "addressCountry": "SK"
+  },
+  "foundingDate": "2014",
+  "areaServed": "Worldwide",
+  "knowsAbout": ["Interior architecture", "Residential design", "Material specification"]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,6 +81,31 @@
     overflow-x: hidden;
   }
   ::selection{ background: var(--ink); color: var(--bg); }
+
+  /* Accessibility: skip-to-content link, visible only when focused */
+  .skip-link{
+    position: fixed;
+    top: -100px; left: 1rem;
+    z-index: 1000;
+    background: var(--ink);
+    color: var(--bg);
+    padding: .75rem 1.25rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    text-decoration: none;
+    transition: top .25s var(--motion);
+  }
+  .skip-link:focus{ top: 1rem; outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* Visible focus indicators (replaces default outline cleanly) */
+  :focus-visible{
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  .pill:focus-visible, .ghost:focus-visible, .nav-mark:focus-visible{
+    outline-offset: 4px;
+  }
 
   /* film-grain overlay */
   body::before{
@@ -655,6 +723,8 @@
 </head>
 <body>
 
+<a href="#main" class="skip-link">Skip to main content</a>
+
 <!-- nav island -->
 <nav class="nav-island" aria-label="Primary">
   <a href="#" class="nav-mark">Halden<span>.</span> Atelier</a>
@@ -676,14 +746,16 @@
   </video>
 </div>
 
+<main id="main">
+
 <!-- HERO -->
-<section class="hero">
+<section class="hero" aria-labelledby="hero-h1">
   <div class="hero-inner">
     <span class="eyebrow enter" data-step="1">
       <span class="dot" aria-hidden="true"></span>
       Bratislava &nbsp;·&nbsp; Est. 2014
     </span>
-    <h1 class="wordmark enter" data-step="2">
+    <h1 id="hero-h1" class="wordmark enter" data-step="2">
       Halden <em>Atelier</em>
     </h1>
     <p class="tagline enter" data-step="3">
@@ -765,6 +837,8 @@
   </div>
 </section>
 
+
+</main>
 
 <!-- scroll cue -->
 <div class="scroll-cue" aria-hidden="true">
